@@ -8,6 +8,7 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
+gem 'guard', '~> 2.14', '>= 2.14.1'
 # Use sqlite3 as the database for Active Record
 
 # Use Puma as the app server
@@ -56,5 +57,11 @@ group :production do
   gem 'pg', '0.20.0'
 end
 
+group :test do
+      gem 'minitest-reporters', '1.0.5'
+      gem 'mini_backtrace',     '0.1.3'
+      gem 'guard-minitest',     '2.3.1'
+    end
+    
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
