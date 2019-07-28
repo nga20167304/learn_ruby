@@ -13,8 +13,12 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
                                     password: "foo",
                                     password_confirmation:"bar" }}
     end
+    
+    assert_redirected_to @user
     follow_redirect!
     assert_template 'users/show'
+    assert_not flash.empty?
+    assert is_logged_in?
     
   end
 end
