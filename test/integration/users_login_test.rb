@@ -5,7 +5,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
   #   assert true
   # end
   def setup
-    @user=users(:admin)
+    @user=users(:nga)
   end
   
   test "login with valid information followed by logout" do

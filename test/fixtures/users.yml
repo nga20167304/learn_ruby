@@ -2,8 +2,40 @@
 
 # 空にする (既存のコードは削除する)
   
-admin:
-  id: 1
+nga:
   name: Do Thuy Nga
   email: nga.dt167304@gmail.com
   password_digest: <%= User.digest('password') %>
+  admin: true
+  
+hoa:
+  name: Dang Thi Hoa
+  email: danghoa0107@gmail.com
+  password_digest: <%= User.digest('password') %>
+  
+hanh:
+  name: Nguyen Thi Hong Hanh
+  email: honghanh2608@gmail.com
+  password_digest: <%= User.digest('password') %>
+
+thao:
+  name: Bui Phuong Thao
+  email: thaosq189@gmail.com
+  password_digest: <%= User.digest('password') %>
+
+hanh_vu:
+  name: Vu Mai Hanh
+  email: hanhvu0107@gmail.com
+  password_digest: <%= User.digest('password') %>  
+
+nhung:
+  name: Vu Thi Hong Nhung
+  email: nhunghong1012@gmail.com
+  password_digest: <%= User.digest('password') %>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  name:  <%= "User #{n}" %>
+  email: <%= "user-#{n}gmail.com" %>
+  password_digest: <%= User.digest('password') %>
+<% end %>
