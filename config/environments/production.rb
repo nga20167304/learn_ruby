@@ -62,7 +62,7 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "sample_app_#{Rails.env}"
   config.action_mailer.perform_caching = false
 
-
+#Railsのproduction環境でSendGridを使う設定
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   host = '<your heroku app>.herokuapp.com'
